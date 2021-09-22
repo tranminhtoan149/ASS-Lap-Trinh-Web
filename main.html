@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <link rel="stylesheet" href="lib/bootstrap.min.css" />
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/popper.min.js"></script>
+        <script src="lib/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="loading">
+            <div class="start">Welcome</div>
+            <img src="images/login/circle/circle1.png" class="spin" id="circle1" alt="" />
+            <img src="images/login/circle/circle2.png" class="spin" id="circle2" alt="" />
+            <img src="images/login/circle/circle3.png" class="spin" id="circle3" alt="" />
+            <img src="images/login/circle/circle4.png" class="spin" id="circle4" alt="" />
+            <img src="images/login/circle/circle5.png" class="spin" id="circle5" alt="" />
+            <img src="images/login/circle/circle6.png" class="spin" id="circle6" alt="" />
+            <div class="success">Success!</div>
+        </div>
+        <!-- <div class="main">
+            <div class="mainmenu">
+                <div class="menu-item menu-begin">Begin</div>
+                <div class="menu-item menu-login">
+                    <span title="Login"><ion-icon name="log-in-outline"></ion-icon></span>
+                </div>
+                <div class="menu-item menu-about">
+                    <span title="About us"><ion-icon name="people-circle-outline"></ion-icon></span>
+                </div>
+                <div class="menu-item menu-home">
+                    <span title="HomePage"><ion-icon name="home-outline"></ion-icon></span>
+                </div>
+                <div class="menu-item menu-contact">
+                    <span title="Contact"><ion-icon name="navigate-outline"></ion-icon></span>
+                </div>
+            </div>
+            <div class="container"></div>
+        </div> -->
+
+        <script>
+            // $(".main").hide();
+            $(".spin").hide();
+            $(".success").hide();
+            $(".start").click(function () {
+                $(this).hide(500);
+                $(".spin").delay(500).fadeIn();
+                $(".success").delay(5500).fadeIn();
+                setTimeout(function () {
+                    $(".loading").fadeOut(500);
+                }, 6500);
+                setTimeout(function () {
+                    window.location.href = "login.html";
+                }, 6500);
+            });
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
